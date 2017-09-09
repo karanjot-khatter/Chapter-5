@@ -4,7 +4,7 @@
 #
 # Author:      Karanjot
 #
-# Created:     06/09/2017
+# Created:     07/09/2017
 # Copyright:   (c) Karanjot 2017
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
@@ -21,9 +21,10 @@ def main():
     #for character in the string
     if inputEorD == "e":
         for ch in inputText:
-            codedMessage += chr(ord(ch) + inputValue) #encode hence plus
+            codedMessage += chr((ord(ch) - 97 + inputValue) % 26 + 97)#encode hence plus ASCII from 97 - 122. therefore letter range 0 -25 (26 letters). a = 97
     elif inputEorD =="d":
-            codedMessage += chr(ord(ch) - inputValue) #decode hence minus
+        for ch in inputText:
+            codedMessage += chr((ord(ch) - 97 - inputValue) % 26 + 97)#decode hence minus
     else:
         print("You did not enter E/D! Try again!!")
     print("The text inputed:", inputText,  ".Is:", inputEorD, ".By the key of",inputValue, ".To make the message", codedMessage)
