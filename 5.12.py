@@ -17,9 +17,9 @@ def main():
     years = eval(input("Enter the number of years: "))
     print("{0}".format("Year"), "{0:12}".format("Value"))
     print("-------------")
-    print("{0:4}".format(0), "£{0:1.2f}".format( principal))
+    print("{0:4}".format(0), "{0:1.2f}".format( principal))
     for i in range(years):
         principal = principal * (1 + apr)
-        print("{0:4}".format(i+1), "£{0:1.2f}".format( principal))
+        print("{0:4}".format(i+1), "{0:1.2f}".format( principal))
 
 main()

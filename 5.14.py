@@ -17,7 +17,7 @@ def main():
     lines = 0
     chars = 0
     for line in inFile:
-        lines = lines + 1 #
+        lines = lines + 1
         chars = chars +len(line) #len returns the length of object. for each object
         words = words + len(line.split()) #length of line split.
 
